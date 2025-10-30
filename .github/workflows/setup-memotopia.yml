@@ -1,7 +1,10 @@
 name: Inicializar estrutura básica da Memotopia
 
 on:
-  workflow_dispatch: {}  # botão "Run workflow" nas Actions
+  workflow_dispatch: {}   # botão "Run workflow"
+
+permissions:
+  contents: write         # autoriza commit/push com GITHUB_TOKEN
 
 jobs:
   setup:
@@ -10,18 +13,51 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Criar diretórios e arquivos base
+        shell: bash
         run: |
+          set -euo pipefail
           mkdir -p textos/exemplo/{insights,referencias,assets}
-          printf "# Exemplo de texto (Memotopia)\n\nEste é um texto de exemplo." > textos/exemplo/index.md
-          printf "- Insight inicial da Memotopia\n" > textos/exemplo/insights/01-primeiro-insight.md
-          printf "# Referência simbólica\nAutor: Exemplo\nLink: https://example.com\n" > textos/exemplo/referencias/ref1.md
-          printf "voz: reflexiva\nritmo: calmo\nmetaforas: 'oficina, jardim, sistema vivo'\n" > textos/exemplo/estilo.yml
-          printf "# Memotopia\n\nRepositório modular de escrita e pensamento.\n" > README.md
+
+          # index.md
+          cat > textos/exemplo/index.md <<'EOF'
+# Exemplo de texto (Memotopia)
+
+Este é um texto de exemplo para validar a estrutura mínima.
+Ele vive como um componente com insights, referências e estilo próprios.
+EOF
+
+          # insight inicial
+          cat > textos/exemplo/insights/01-primeiro-insight.md <<'EOF'
+- Insight inicial da Memotopia: “cada texto é um componente vivo”.
+EOF
+
+          # referência simbólica
+          cat > textos/exemplo/referencias/ref1.md <<'EOF'
+# Referência simbólica
+Autor: Exemplo
+Link: https://example.com
+Notas: usada apenas para testar estrutura.
+EOF
+
+          # estilo.yml
+          cat > textos/exemplo/estilo.yml <<'EOF'
+voz: reflexiva
+ritmo: calmo
+metaforas: "oficina, jardim, sistema vivo"
+EOF
+
+          # README
+          cat > README.md <<'EOF'
+# Memotopia
+
+Repositório modular de escrita e pensamento.  
+Cada texto é um componente autônomo com seus próprios insights, referências e estilo.
+EOF
 
       - name: Commit inicial automático
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "setup: estrutura base da Memotopia criada automaticamente"
+          git commit -m "setup: estrutura base da Memotopia criada automaticamente" || echo "Nada a commitar"
           git push
