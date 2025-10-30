@@ -1,0 +1,32 @@
+name: Atualizar índice de textos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'textos/**'
+
+jobs:
+  gerar_indice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gerar lista de textos
+        run: |
+          echo "# Índice de Textos" > INDEX.md
+          echo "" >> INDEX.md
+          for d in textos/*/ ; do
+            titulo=$(basename "$d")
+            if [ -f "$d/index.md" ]; then
+              echo "- [${titulo}](./${d}index.md)" >> INDEX.md
+            fi
+          done
+
+      - name: Commit e push do índice
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add INDEX.md
+          git commit -m "Atualiza índice automático de textos" || echo "Sem mudanças"
+          git push
