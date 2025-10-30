@@ -1,0 +1,24 @@
+name: Publicar site da Memotopia
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Preparar conteúdo
+        run: |
+          mkdir -p public
+          cp -r textos public/
+          cp README.md public/index.md
+          echo "Memotopia - Publicação automática gerada em $(date)" >> public/index.md
+
+      - name: Publicar no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
