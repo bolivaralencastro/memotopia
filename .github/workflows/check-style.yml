@@ -1,0 +1,21 @@
+name: Validar metadados de estilo
+
+on:
+  pull_request:
+    paths:
+      - 'textos/**/estilo.yml'
+
+jobs:
+  validar_estilo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checar campos obrigatórios em estilo.yml
+        run: |
+          for file in $(find textos -name "estilo.yml"); do
+            echo "Verificando $file..."
+            grep -q "voz:" "$file" || (echo "Falta campo 'voz:' em $file" && exit 1)
+            grep -q "ritmo:" "$file" || (echo "Falta campo 'ritmo:' em $file" && exit 1)
+            grep -q "metaforas:" "$file" || (echo "Falta campo 'metaforas:' em $file" && exit 1)
+          done
