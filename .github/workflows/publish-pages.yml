@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   build_and_publish:
     runs-on: ubuntu-latest
@@ -13,9 +16,15 @@ jobs:
       - name: Preparar conteúdo
         run: |
           mkdir -p public
-          cp -r textos public/
-          cp README.md public/index.md
-          echo "Memotopia - Publicação automática gerada em $(date)" >> public/index.md
+          # Copia README como homepage
+          cp README.md public/index.md 2>/dev/null || echo "# Memotopia" > public/index.md
+          # Copia textos se existirem
+          if [ -d textos ]; then
+            cp -r textos public/
+          else
+            echo "\n_Nota: nenhum texto disponível ainda._" >> public/index.md
+          fi
+          echo "\n\n---\nGerado em $(date -u +'%Y-%m-%d %H:%M UTC')" >> public/index.md
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
