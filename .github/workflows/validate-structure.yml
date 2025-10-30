@@ -1,0 +1,31 @@
+name: Validar estrutura de texto
+
+on:
+  pull_request:
+    paths:
+      - 'textos/**'
+  push:
+    branches: [main]
+    paths:
+      - 'textos/**'
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verificar pastas obrigatórias e frontmatter
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for dir in textos/*/ ; do
+            echo "▶ Checando $dir"
+            test -f "${dir}index.md" || { echo "Falta index.md em ${dir}"; exit 1; }
+            test -d "${dir}insights"  || { echo "Falta pasta /insights em ${dir}"; exit 1; }
+            test -d "${dir}referencias" || { echo "Falta pasta /referencias em ${dir}"; exit 1; }
+            # frontmatter YAML mínima no index.md (--- na 1ª linha)
+            head -n 1 "${dir}index.md" | grep -q '^---$' || { echo "index.md sem frontmatter YAML em ${dir}"; exit 1; }
+          done
+          echo "✓ Estrutura válida"
