@@ -4,7 +4,7 @@ on:
   workflow_dispatch: {}   # botão "Run workflow"
 
 permissions:
-  contents: write         # autoriza commit/push com GITHUB_TOKEN
+  contents: write         # permite commit/push com GITHUB_TOKEN
 
 jobs:
   setup:
@@ -58,6 +58,6 @@ EOF
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add .
-          git commit -m "setup: estrutura base da Memotopia criada automaticamente" || echo "Nada a commitar"
-          git push
+          git add -A
+          git commit -m "setup: estrutura base da Memotopia criada automaticamente" || true
+          git push || true
