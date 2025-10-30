@@ -2,7 +2,7 @@ name: Publicar site da Memotopia
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 permissions:
   contents: write
@@ -11,36 +11,46 @@ jobs:
   build_and_publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Montar site estático (HTML)
         run: |
           set -e
           mkdir -p public
 
-          # index.html (home)
           cat > public/index.html <<'EOF'
 <!doctype html>
 <html lang="pt-br">
 <meta charset="utf-8">
-<title>Memotopia</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memotopia</title>
 <body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 800px; margin: 40px auto; line-height:1.6;">
-<h1>Memotopia</h1>
-<p>Ecossistema modular de escrita e pensamento.</p>
-<h2>Textos</h2>
-<ul>
+  <h1>Memotopia</h1>
+  <p>Ecossistema modular de escrita e pensamento.</p>
+  <h2>Textos</h2>
+  <ul>
 EOF
 
-          # lista de textos com links para o próprio repo (garantido)
+          # adicionar itens da lista (links para o repo)
           for d in textos/*/ ; do
-            name=$(basename "$d")
+            name="$(basename "$d")"
             echo "<li><a href=\"https://github.com/${GITHUB_REPOSITORY}/tree/main/textos/${name}\">${name}</a></li>" >> public/index.html
           done
 
-          echo "</ul><hr><p>Gerado em $(date -u +'%Y-%m-%d %H:%M UTC')</p></body></html>" >> public/index.html
+          # fechar HTML
+          cat >> public/index.html <<'EOF'
+  </ul>
+  <hr>
+  <p>Gerado em <!--DATE--></p>
+</body>
+</html>
+EOF
 
-          # opcional: expor pasta textos como estático (para baixar .md)
+          # inserir data UTC no placeholder
+          sed -i "s/<!--DATE-->/$(date -u +'%Y-%m-%d %H:%M UTC')/" public/index.html
+
+          # (opcional) expor os .md para download
           if [ -d textos ]; then
             cp -r textos public/
           fi
@@ -50,3 +60,5 @@ EOF
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          # por padrão publica em gh-pages
+
