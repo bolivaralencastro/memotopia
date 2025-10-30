@@ -1,0 +1,30 @@
+name: Inicializar estrutura básica da Memotopia
+
+on:
+  workflow_dispatch:   # Permite rodar manualmente pelo botão "Run workflow"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Criar diretórios e arquivos base
+        run: |
+          mkdir -p textos/exemplo/{insights,referencias,assets}
+          echo "# Exemplo de texto" > textos/exemplo/index.md
+          echo "- Insight inicial da Memotopia" > textos/exemplo/insights/01-primeiro-insight.md
+          echo "- Referência simbólica (autor, link, contexto)" > textos/exemplo/referencias/ref1.md
+          echo "voz: reflexiva\nritmo: calmo\nmetaforas: 'oficina, jardim, sistema vivo'" > textos/exemplo/estilo.yml
+          echo "![Capa](assets/capa.webp)" > textos/exemplo/assets/readme.md
+
+          echo "# Memotopia" > README.md
+          echo "Repositório modular de escrita e pensamento. Cada texto é um componente vivo com seus próprios insights, referências e estilo." >> README.md
+
+      - name: Commit inicial automático
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "setup: estrutura base da Memotopia criada automaticamente"
+          git push
