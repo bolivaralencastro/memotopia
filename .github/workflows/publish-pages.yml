@@ -1,25 +1,33 @@
-name: Publicar site da Memotopia
+name: Publish Memotopia (GitHub Pages)
 
 on:
   push:
     branches: [ main ]
 
+# Permissões exigidas pelo deploy-pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build_and_publish:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Montar site estático (HTML)
+      - name: Build public site
         run: |
           set -e
           mkdir -p public
 
-          cat > public/index.html <<'EOF'
+          # index.html sem acentos para evitar qualquer parsing bobo
+          cat > public/index.html <<'HTML'
 <!doctype html>
 <html lang="pt-br">
 <meta charset="utf-8">
@@ -30,35 +38,44 @@ jobs:
   <p>Ecossistema modular de escrita e pensamento.</p>
   <h2>Textos</h2>
   <ul>
-EOF
+HTML
 
-          # adicionar itens da lista (links para o repo)
-          for d in textos/*/ ; do
-            name="$(basename "$d")"
-            echo "<li><a href=\"https://github.com/${GITHUB_REPOSITORY}/tree/main/textos/${name}\">${name}</a></li>" >> public/index.html
-          done
+          # Lista de textos com link para o repo
+          if [ -d textos ]; then
+            for d in textos/*/ ; do
+              name="$(basename "$d")"
+              echo "<li><a href=\"https://github.com/${GITHUB_REPOSITORY}/tree/main/textos/${name}\">${name}</a></li>" >> public/index.html
+            done
+          else
+            echo "<li><em>nenhum texto ainda</em></li>" >> public/index.html
+          fi
 
-          # fechar HTML
-          cat >> public/index.html <<'EOF'
+          cat >> public/index.html <<'HTML'
   </ul>
   <hr>
-  <p>Gerado em <!--DATE--></p>
+  <p>Gerado em <span id="stamp"></span> (UTC)</p>
+  <script>document.getElementById('stamp').textContent = new Date().toISOString().slice(0,16).replace('T',' ')</script>
 </body>
 </html>
-EOF
+HTML
 
-          # inserir data UTC no placeholder
-          sed -i "s/<!--DATE-->/$(date -u +'%Y-%m-%d %H:%M UTC')/" public/index.html
-
-          # (opcional) expor os .md para download
+          # (Opcional) expor os .md para download/visualizacao bruta
           if [ -d textos ]; then
             cp -r textos public/
           fi
 
-      - name: Publicar no GitHub Pages (gh-pages)
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          # por padrão publica em gh-pages
+          path: public
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
