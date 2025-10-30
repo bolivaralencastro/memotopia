@@ -1,7 +1,7 @@
 name: Inicializar estrutura básica da Memotopia
 
 on:
-  workflow_dispatch:   # Permite rodar manualmente pelo botão "Run workflow"
+  workflow_dispatch: {}  # botão "Run workflow" nas Actions
 
 jobs:
   setup:
@@ -12,14 +12,11 @@ jobs:
       - name: Criar diretórios e arquivos base
         run: |
           mkdir -p textos/exemplo/{insights,referencias,assets}
-          echo "# Exemplo de texto" > textos/exemplo/index.md
-          echo "- Insight inicial da Memotopia" > textos/exemplo/insights/01-primeiro-insight.md
-          echo "- Referência simbólica (autor, link, contexto)" > textos/exemplo/referencias/ref1.md
-          echo "voz: reflexiva\nritmo: calmo\nmetaforas: 'oficina, jardim, sistema vivo'" > textos/exemplo/estilo.yml
-          echo "![Capa](assets/capa.webp)" > textos/exemplo/assets/readme.md
-
-          echo "# Memotopia" > README.md
-          echo "Repositório modular de escrita e pensamento. Cada texto é um componente vivo com seus próprios insights, referências e estilo." >> README.md
+          printf "# Exemplo de texto (Memotopia)\n\nEste é um texto de exemplo." > textos/exemplo/index.md
+          printf "- Insight inicial da Memotopia\n" > textos/exemplo/insights/01-primeiro-insight.md
+          printf "# Referência simbólica\nAutor: Exemplo\nLink: https://example.com\n" > textos/exemplo/referencias/ref1.md
+          printf "voz: reflexiva\nritmo: calmo\nmetaforas: 'oficina, jardim, sistema vivo'\n" > textos/exemplo/estilo.yml
+          printf "# Memotopia\n\nRepositório modular de escrita e pensamento.\n" > README.md
 
       - name: Commit inicial automático
         run: |
