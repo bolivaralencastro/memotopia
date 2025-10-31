@@ -45,6 +45,7 @@ jobs:
           if [ -d textos ]; then
             for d in textos/*/ ; do
               name="$(basename "$d")"
+              echo "DEBUG: Found text directory: $name" # <--- ADD THIS DEBUG LINE
               echo "<li><a href=\"https://github.com/${GITHUB_REPOSITORY}/tree/main/textos/${name}\">${name}</a></li>" >> public/index.html
             done
           else
