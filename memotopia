@@ -9,8 +9,10 @@ if [ -z "$1" ]; then
   echo "
 Subcomandos disponíveis:"
   echo "  new <nome-do-texto> - Cria uma nova pasta de texto com a estrutura padrão."
-  echo "  push <mensagem>     - Adiciona, commita e envia alterações para o repositório remoto.
-  update-nav          - Atualiza links de navegação em todos os textos (índice principal, conteúdo relacionado, links de retorno)."
+  echo "  insight <texto> \"Título\" - Cria um insight numerado em textos/<texto>/insights/."
+  echo "  ref <texto> \"Título\" [--autor Nome] [--link URL] - Cria referência sequencial em textos/<texto>/referencias/."
+  echo "  push <mensagem>     - Adiciona, commita e envia alterações para o repositório remoto."
+  echo "  update-nav          - Atualiza links de navegação em todos os textos (índice principal, conteúdo relacionado, links de retorno)."
   exit 1
 fi
 

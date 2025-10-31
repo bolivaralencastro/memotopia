@@ -1,0 +1,21 @@
+# Esquema de referência para estilo.yml
+required:
+  - voz
+  - ritmo
+  - metaforas
+properties:
+  voz:
+    description: Descreve a voz (ex. profissional inspiradora)
+  ritmo:
+    description: Descreve o ritmo (ex. dinâmico, fluido)
+  metaforas:
+    description: Lista curta de metáforas orientadoras
+  publico:
+    description: Público-alvo do texto
+  objetivo:
+    description: Objetivo principal do texto
+  tom:
+    description: Tom desejado (ex. técnico, empático)
+  restricoes:
+    description: Restrições de linguagem/escopo
+

@@ -5,12 +5,17 @@
 [Voltar ao Índice da Memotopia](../../INDEX.md)
 
 ## Perfil Profissional
-- **Produto, UX/UI, Direção de Arte e Fotografia**
-- **Localização:** Florianópolis / São Paulo
-- **Contato:** [bolivar@alencastro.com.br](mailto:bolivar@alencastro.com.br) · +55 48 98413-8601
-- **Links:** [LinkedIn](https://linkedin.com/in/bolivaralencastro) · [Portfólio](https://bolivaralencastro.com.br) · [Instagram](https://instagram.com/bolivar.alencastro.design)
+**Product Designer** com **18 anos de experiência**, evoluindo de Design Gráfico e Direção de Arte para **UX/UI** e **Estratégia de Produto**. Base forte em comunicação visual e branding para criar soluções que resolvem problemas de usabilidade, fortalecem a marca e geram impacto de negócio.
 
-Profissional com **18 anos de experiência** em design gráfico, direção de arte, fotografia e UX. Combina **design thinking**, visão estratégica e domínio de ferramentas digitais para entregar soluções que conectam estética, usabilidade e resultados de negócio.
+- **Localização:** São Paulo / Florianópolis
+- **Contato:** [bolivar@alencastro.com.br](mailto:bolivar@alencastro.com.br) · +55 48 98413-8601
+- **Links:** [LinkedIn](https://www.linkedin.com/in/bolivaralencastro) · [Portfólio](https://www.bolivaralencastro.com.br)
+
+Atuação ponta a ponta (discovery → delivery) com foco em:
+
+- **Design Systems:** implementação e manutenção para escalar eficiência e consistência (aceleração de features e correções)
+- **UX orientada a dados:** pesquisa quantitativa e qualitativa, análise de métricas e experimentação
+- **Resultados de negócio:** melhorias tangíveis em retenção e conversão de leads
 
 ## Destaques Recentes
 ### Keeps Learning · Product Designer (ago/2022 – atual)
@@ -51,13 +56,13 @@ Profissional com **18 anos de experiência** em design gráfico, direção de ar
 - Estratégias de Produtividade – ENAP (25 h)
 
 ## Competências
-**UX & Produto:** UX Research, Design Thinking, UI Design, Prototipagem, Wireframing, Design Responsivo, Testes de Usabilidade, Mapeamento de Jornada, Análise de Métricas, Melhoria Contínua.
+**UX & Produto:** Pesquisa de Usuário (quantitativa e qualitativa), Design Thinking, UX Writing, UI Design, Prototipagem, Wireframing, Design Responsivo, Design de Interação, Testes de Usabilidade, Mapeamento de Jornada, Análise de Métricas, Melhoria Contínua.
 
-**Gestão & Colaboração:** Gestão de Projetos, Colaboração Multidisciplinar, Planejamento de Experiência, Comunicação Visual, Apresentação de Soluções, Gestão de Tempo.
+**Gestão & Colaboração:** Gestão de projetos de Design, Colaboração Multidisciplinar, Planejamento de Experiência, Comunicação Visual, Apresentação de Soluções, Trabalho em Equipe, Metodologias Ágeis.
 
-**Soft Skills:** Criatividade, Pensamento Analítico, Resolução de Problemas, Atenção aos Detalhes, Aprendizagem Contínua, Adaptabilidade.
+**Soft Skills:** Criatividade, Pensamento Analítico, Resolução de Problemas, Adaptabilidade, Atenção aos Detalhes, Gestão do Tempo, Aprendizagem Contínua.
 
-**Ferramentas e Técnicas:** ClickUp, Figma, Design Systems, HTML, CSS, Fotografia, Retouching.
+**Ferramentas e Técnicas:** Figma, Design Systems, ClickUp, Miro, Adobe Creative Suite, Confluence, HTML, CSS, Fotografia e Retouching.
 
 **Idiomas:** Português (nativo), Inglês (avançado).
 
@@ -73,5 +78,7 @@ Profissional com **18 anos de experiência** em design gráfico, direção de ar
 *   [Narrativa de Valor](./insights/01-primeiro-insight.md)
 ### Referências
 *   [Currículo detalhado de Bolívar Alencastro](./referencias/ref1.md)
+*   [Currículo atualizado de Bolívar Alencastro](./referencias/ref2.md)
+*   [Vaga: Product Designer Sênior — Suflex](./referencias/ref3.md)
 <!-- RELATED_CONTENT_END -->
 

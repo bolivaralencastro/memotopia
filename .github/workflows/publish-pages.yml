@@ -1,3 +1,56 @@
+name: publish-pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static content
+        run: |
+          set -euo pipefail
+          rm -rf public
+          mkdir -p public/textos
+          # índice simples
+          cat > public/index.html <<'HTML'
+          <!doctype html>
+          <meta charset="utf-8"/>
+          <title>Memotopia</title>
+          <h1>Memotopia</h1>
+          <p>Links para os textos no repositório:</p>
+          <ul>
+          HTML
+          for d in $(ls -1d textos/*/ | sort); do
+            name=$(basename "$d")
+            echo "  <li><a href=\"https://github.com/${GITHUB_REPOSITORY}/blob/main/textos/${name}/index.md\">${name}</a></li>" >> public/index.html
+          done
+          echo "</ul>" >> public/index.html
+          # copia textos para consulta crua
+          cp -R textos/* public/textos/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
 name: Publish Memotopia (GitHub Pages)
 
 on:

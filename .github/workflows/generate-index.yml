@@ -1,3 +1,45 @@
+name: generate-index
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'textos/**'
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Generate INDEX.md
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "# Índice de Textos" > INDEX.md
+          echo >> INDEX.md
+          shopt -s nullglob
+          for d in $(ls -1d textos/*/ | sort); do
+            name=$(basename "$d")
+            echo "- [$name](./textos/$name/index.md)" >> INDEX.md
+          done
+      - name: Commit and push index
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet INDEX.md; then
+            echo "No index changes"
+            exit 0
+          fi
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add INDEX.md
+          git commit -m "chore(ci): update INDEX.md"
+          git push
 name: Atualizar índice de textos
 
 on:

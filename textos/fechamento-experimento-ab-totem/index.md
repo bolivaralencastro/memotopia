@@ -42,6 +42,40 @@ A análise dos feedbacks e do comportamento dos usuários com o Clarity revelou 
 
 ---
 
+## Percurso de Divulgação no LinkedIn e Aprendizados
+
+Além das métricas do experimento, a divulgação pública no LinkedIn fez parte do processo de validação social e de engajamento com stakeholders. Em três publicações, o projeto foi apresentado, discutido e iterado, o que trouxe aprendizados sobre alcance, mensagem e momento de solicitar feedback.
+
+Síntese do alcance (22–28 out 2025):
+
+*   **Impressões:** 2.362 | **Usuários alcançados:** 1.588 | **Visitas ao link:** 19
+*   **Reações:** 24 | **Comentários:** 12 | **Compartilhamentos:** 0 | **Salvamentos:** 2 | **Envios:** 4
+
+Ecos relevantes:
+
+*   A Fundação Pró-Sangue reconheceu o estudo e sinalizou encaminhamento à TI.
+*   A WTotem elogiou a iniciativa e manifestou interesse em discutir melhorias.
+
+Aprendizados da divulgação (Publicações 2 e 3):
+
+1. **Aderência e canal:** Mesmo com boa recepção orgânica, a participação ficou abaixo do esperado. Abrir o acesso mobile foi necessário, mas insuficiente sem reforço de mensagem e contexto.
+2. **Momento do feedback:** Mover a avaliação para logo após cada interface aumentou taxa e qualidade das respostas.
+3. **CTA de doação:** Reposicionar e reescrever o convite ajudou a investigar se a baixa taxa de cliques era comunicação, contexto ou motivação.
+
+Distribuição do engajamento entre publicações:
+
+*   **Publicação 1** concentrou a maior parte do alcance e do diálogo (≈2.132 impressões, 21 reações e 12 comentários),
+    evidenciando a força do contexto e da novidade do projeto.
+*   **Publicações 2 e 3** tiveram repercussão substancialmente menor (≈113–117 impressões e 1–2 reações),
+    reforçando a necessidade de ajustar mensagem, timing e formato para sustentar o interesse ao longo do tempo.
+
+Referências:
+
+*   [Estatísticas de publicações no LinkedIn](./referencias/estatisticas-linkedin.md)
+*   [Publicações no LinkedIn — compilado de texto e reações](./referencias/publicacoes-linkedin-compilado.md)
+
+---
+
 ## Discussão e Oportunidades de Melhoria
 
 A combinação dos dados quantitativos e qualitativos oferece um mapa claro para futuras iterações do projeto. As principais oportunidades de melhoria são:

@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Node/JS (se futuramente usar tooling)
+node_modules/
+dist/
+build/
+
+# Python/venv (caso scripts auxiliares)
+.venv/
+__pycache__/
+
+# Artifacts
+public/
+*.log
+

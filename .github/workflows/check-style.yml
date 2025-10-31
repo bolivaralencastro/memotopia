@@ -1,3 +1,29 @@
+name: check-style
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'textos/**/estilo.yml'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate estilo.yml required fields
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          fail=0
+          for f in textos/**/estilo.yml; do
+            echo "Checking $f"
+            grep -q '^voz:' "$f" || { echo "❌ missing 'voz' in $f"; fail=1; }
+            grep -q '^ritmo:' "$f" || { echo "❌ missing 'ritmo' in $f"; fail=1; }
+            grep -q '^metaforas:' "$f" || { echo "❌ missing 'metaforas' in $f"; fail=1; }
+          done
+          exit $fail
 name: Validar metadados de estilo
 
 on:

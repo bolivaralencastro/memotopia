@@ -157,6 +157,31 @@ Após adicionar, execute `source ~/.bashrc` (ou `source ~/.zshrc`) ou abra um no
     *   `git push`: Envia suas alterações (já integradas) para o repositório remoto.
 
 ### `memotopia update-nav`
+### `memotopia insight <nome-do-texto> "Título"`
+
+**Propósito:** Cria um novo insight numerado automaticamente dentro de `textos/<nome-do-texto>/insights/` seguindo o padrão `NN-slug.md` (ex.: `01-minha-ideia.md`).
+
+*   **Uso:**
+    ```bash
+    memotopia insight meu-texto "Hipótese inicial"
+    ```
+*   **O que faz:**
+    *   Calcula o próximo número disponível (com zero à esquerda) com base nos arquivos existentes.
+    *   Gera o slug a partir do título.
+    *   Cria o arquivo com frontmatter, título como `#`, seção inicial e link `[Voltar ao Texto Principal]` no final.
+
+### `memotopia ref <nome-do-texto> "Título" [--autor Nome] [--link URL]`
+
+**Propósito:** Cria uma nova referência numerada sequencialmente como `refN.md` dentro de `textos/<nome-do-texto>/referencias/` (seguindo o padrão atual do projeto).
+
+*   **Uso:**
+    ```bash
+    memotopia ref meu-texto "Artigo base sobre UX" --autor "Fulana" --link "https://exemplo.com"
+    ```
+*   **O que faz:**
+    *   Identifica o próximo índice `N` (ex.: `ref3.md`).
+    *   Cria o arquivo com frontmatter, título como `#`, e campos opcionais de Autor/Link se fornecidos, além do link de retorno ao texto principal.
+
 
 **Propósito:** Atualiza e mantém a consistência dos links de navegação em todos os textos.
 
@@ -182,6 +207,44 @@ Para garantir a organização e a automação do projeto:
 5.  **Verifique as GitHub Actions**: Monitore a aba "Actions" do seu repositório no GitHub para garantir que todas as validações e publicações estão ocorrendo sem erros.
 
 ## ✨ Melhorias Futuras (Consideradas)
+## 🧠 Uso de IAs (Qwen, Gemini, Cursor)
+
+- Leia `AI_GUIDE.md` para melhores práticas, fluxo recomendado e anti-padrões.
+- Use templates de prompt em `prompts/`:
+  - `prompts/new_texto.prompt.md`
+  - `prompts/new_insight.prompt.md`
+  - `prompts/new_referencia.prompt.md`
+- Esquema de metadados: `schemas/estilo.schema.yml` (documentação dos campos de `estilo.yml`).
+
+### Instalação rápida das CLIs
+
+- Gemini (Google):
+  - Requer Node.js >= 20.
+  - Instalação global:
+    ```bash
+    npm install -g @google/gemini-cli
+    ```
+  - Execução:
+    ```bash
+    gemini
+    # ou sem instalar globalmente
+    npx @google/gemini-cli
+    ```
+
+- Qwen (local via Ollama):
+  - Windows (PowerShell):
+    ```powershell
+    winget install Ollama.Ollama
+    ollama pull qwen2:7b
+    ollama run qwen2:7b
+    ```
+  - macOS (Homebrew):
+    ```bash
+    brew install ollama
+    ollama pull qwen2:7b
+    ollama run qwen2:7b
+    ```
+
 
 *   **Integração com Static Site Generator (SSG)**: Para renderização completa e estilizada dos arquivos Markdown em HTML no GitHub Pages (ex: Jekyll, Hugo, Next.js).
 *   **Funcionalidade de Busca:** Implementar uma barra de busca no site do GitHub Pages para facilitar a descoberta de conteúdo.

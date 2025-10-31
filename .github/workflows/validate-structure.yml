@@ -1,3 +1,38 @@
+name: validate-structure
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'textos/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'textos/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate each text component structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          fail=0
+          for d in textos/*/; do
+            echo "Checking $d"
+            [ -f "$d/index.md" ] || { echo "❌ missing index.md in $d"; fail=1; }
+            [ -f "$d/estilo.yml" ] || { echo "❌ missing estilo.yml in $d"; fail=1; }
+            [ -d "$d/insights" ] || { echo "❌ missing insights/ in $d"; fail=1; }
+            [ -d "$d/referencias" ] || { echo "❌ missing referencias/ in $d"; fail=1; }
+            # frontmatter must start with --- on first line
+            if [ -f "$d/index.md" ]; then
+              head -n1 "$d/index.md" | grep -q '^---$' || { echo "❌ $d/index.md must start with '---'"; fail=1; }
+            fi
+          done
+          exit $fail
 name: Validar estrutura de texto
 
 on:
