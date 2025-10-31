@@ -1,0 +1,1 @@
+- Insight inicial: todo texto nasce como uma semente.

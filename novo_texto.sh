@@ -1,4 +1,3 @@
-cat > novo_texto.sh <<'EOF'
 #!/bin/bash
 TITULO=$1
 if [ -z "$TITULO" ]; then
@@ -34,6 +33,3 @@ EOT
 
 touch textos/$TITULO/assets/.gitkeep
 echo "🌱 Texto '$TITULO' criado com sucesso!"
-EOF
-
-chmod +x novo_texto.sh
