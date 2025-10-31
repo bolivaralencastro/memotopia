@@ -5,75 +5,58 @@
 
 ## Design, dados e o aprendizado de projetar o próprio teste
 
-Depois de doar sangue na Fundação Pró-Sangue, em São Paulo, notei algo simples: o totem de autoatendimento poderia oferecer uma digitação de CPF mais intuitiva.
-Esse pequeno detalhe deu origem a um projeto pessoal de design e pesquisa aplicada, criado com o mesmo propósito da doação — contribuir de forma prática para melhorar a experiência de outras pessoas.
+Depois de doar sangue na Fundação Pró-Sangue, em São Paulo, notei algo simples: o totem de autoatendimento poderia oferecer uma digitação de CPF mais intuitiva. Esse pequeno detalhe deu origem a um projeto pessoal de design e pesquisa aplicada, criado com o mesmo propósito da doação — contribuir de forma prática para melhorar a experiência de outras pessoas.
 
 A proposta foi testar duas versões da tela de digitação e medir, de forma estruturada, qual delas era mais rápida, mais clara e menos propensa a erros.
 
 ---
 
-## ⚙️ A tecnologia por trás do teste
+## Metodologia e Tecnologia
 
-O experimento foi desenvolvido com Angular + TypeScript e estilizado com TailwindCSS, priorizando leveza, escalabilidade e controle total da experiência do usuário.
-A coleta de dados foi automatizada com Google Sheets, que registrava tempo de digitação, número de erros e feedbacks em tempo real.
-O comportamento dos participantes foi acompanhado com o Microsoft Clarity, permitindo observar cliques, rolagens e origens de tráfego — uma visão completa da interação.
+O experimento foi desenvolvido com Angular + TypeScript e estilizado com TailwindCSS, priorizando leveza, escalabilidade e controle total da experiência do usuário. A coleta de dados foi automatizada com Google Sheets, que registrava tempo de digitação, número de erros e feedbacks em tempo real. O comportamento dos participantes foi acompanhado com o Microsoft Clarity, permitindo observar cliques, rolagens e origens de tráfego — uma visão completa da interação.
 
-O projeto foi hospedado no GitHub Pages e otimizado cuidadosamente.
-O resultado técnico: pontuação máxima (100/100) em desempenho, acessibilidade, práticas recomendadas e SEO no PageSpeed Insights, tanto em desktop quanto em mobile.
-O objetivo nunca foi construir um app grande, mas provar que boas decisões de arquitetura e código limpo podem gerar eficiência total mesmo em projetos pequenos.
+O projeto foi hospedado no GitHub Pages e otimizado cuidadosamente, alcançando a pontuação máxima (100/100) em desempenho, acessibilidade, práticas recomendadas e SEO no PageSpeed Insights, tanto em desktop quanto em mobile.
 
 ---
 
-## 📊 Resultados de uso
+## Análise Quantitativa dos Resultados
 
-Durante o período de teste, 72 pessoas participaram — a maioria via celular.
-Mesmo com uma amostra pequena, os dados foram consistentes:
+Os dados coletados de 72 participantes revelaram uma melhoria significativa de performance com a nova interface. A análise quantitativa dos dados mostra uma redução média de 20 a 35% no tempo de digitação na nova versão.
 
-* Redução média de 20 a 35 % no tempo de digitação na nova versão
-* Menos erros e maior satisfação declarada
-* Feedbacks que destacaram a familiaridade com o layout numérico e a facilidade visual
+A análise por dispositivo, combinando dados do experimento e do Clarity, mostra que a melhora é ainda mais expressiva em dispositivos móveis:
 
-Esses resultados validam uma premissa simples, mas essencial: melhorar microinterações pode gerar ganhos reais de experiência — especialmente em ambientes públicos, onde o tempo e a clareza importam.
-
----
-
-## 📣 O desafio da adesão
-
-Conseguir participantes foi tão desafiador quanto desenvolver a ferramenta.
-Mesmo com mais de 2 000 impressões e 1 300 pessoas alcançadas no LinkedIn, e cerca de 1 600 pessoas via WhatsApp, o número de testantes ficou abaixo do esperado.
-O Clarity mostrou 21 acessos vindos do LinkedIn, 8 do Instagram e o restante de convites diretos.
-
-Essa etapa revelou que a comunicação é parte do design — o modo como convidamos alguém a participar influencia tanto quanto o próprio fluxo de uso.
-Projetar um teste é, no fundo, projetar também o caminho até ele.
+| Dispositivo | Tempo Médio Original (ms) | Tempo Médio Nova (ms) | Redução Média de Tempo (%) |
+|---|---|---|---|
+| PC | 120535 | 7534 | 93.75% |
+| Mobile | 153394 | 6321 | 95.88% |
 
 ---
 
-## 🧠 Aprendizados
+## Análise Qualitativa e Comportamental
 
-O projeto acabou se tornando um laboratório completo: de UX, de comunicação e de tecnologia.
-O uso combinado de ferramentas abertas — Angular, TypeScript, Tailwind, Clarity e Google Sheets — mostrou que é possível executar experimentos reais com custo zero, rastreabilidade e resultados confiáveis.
-Mais do que um protótipo funcional, esse projeto foi uma lição sobre a importância de testar ideias no mundo real, onde cada clique e cada silêncio também comunicam.
+A análise dos feedbacks e do comportamento dos usuários com o Clarity revelou pontos importantes:
+
+*   **Familiaridade e Intuitividade:** A maioria dos usuários considerou a nova interface mais "familiar" e "intuitiva", o que justifica a redução no tempo de digitação.
+*   **Uso Mobile:** Quase metade dos acessos (47,8%) foram feitos em dispositivos móveis, um dado que reforça a importância de uma experiência mobile bem resolvida.
+*   **Pontos de Fricção:** O Clarity revelou que 11% dos cliques foram "inativos", ocorrendo quando o usuário tentava clicar em botões desabilitados. Além disso, foram registrados 7 erros de JavaScript, indicando pontos de melhoria na estabilidade da aplicação.
 
 ---
 
-## ❤️ Conclusão
+## Discussão e Oportunidades de Melhoria
 
-O estudo se encerra com resultados sólidos, abertura para diálogo e um aprendizado que vai além da interface.
-A Fundação Pró-Sangue e a WTotem responderam ao estudo e demonstraram interesse nas descobertas — e isso, por si só, já valida o esforço.
+A combinação dos dados quantitativos e qualitativos oferece um mapa claro para futuras iterações do projeto. As principais oportunidades de melhoria são:
+
+1.  **Adaptar o fluxo para Mobile:** Criar uma experiência guiada para usuários de celular, que representam uma parcela significativa do tráfego.
+2.  **Reduzir Cliques Inativos:** Implementar feedback visual imediato, como contadores de dígitos, para informar ao usuário por que um botão está desabilitado.
+3.  **Investigar Erros de JavaScript:** Corrigir os erros de "cannot read properties of null (reading 'usestate')" para melhorar a estabilidade e a performance da aplicação.
+
+---
+
+## Conclusão
+
+Este experimento demonstrou, com dados, que uma pequena mudança de design em uma microinteração pode gerar um impacto significativo na experiência do usuário. A nova interface não só se provou mais eficiente, como também foi percebida como mais intuitiva e agradável pelos usuários.
+
+O estudo se encerra com resultados sólidos, um caminho claro para futuras melhorias e um aprendizado que vai além da interface: a importância de combinar dados quantitativos e qualitativos para tomar decisões de design mais informadas. A Fundação Pró-Sangue e a WTotem responderam ao estudo e demonstraram interesse nas descobertas, validando o esforço e abrindo portas para um diálogo produtivo.
 
 O experimento segue aberto para quem quiser conhecer e explorar:
 👉 https://bolivaralencastro.github.io/hemocentro-totem-ab-test/
-
----
-
-
-## Conteúdo Relacionado
-
-<!-- RELATED_CONTENT_START -->
-### Insights
-*   [01-dados-experimento](./insights/01-dados-experimento.md)
-*   [Análise de Dados do Clarity](./insights/02-dados-clarity.md)
-*   [Análise Cruzada de Dados: Experimento A/B e Comportamento do Usuário](./insights/03-analise-cruzada-de-dados.md)
-*   [Como aproveitar os dados do Clarity](./insights/04-oportunidades-de-melhoria-com-clarity.md)
-<!-- RELATED_CONTENT_END -->
-
