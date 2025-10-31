@@ -76,6 +76,29 @@ Referências:
 
 ---
 
+## Divulgação em Grupos (WhatsApp) e Conversão
+
+Para ampliar a base de participantes, o experimento também foi divulgado em quatro grupos do WhatsApp, testando variações de mensagem e contexto. O desempenho variou conforme o tipo de comunidade e proximidade com o tema.
+
+Resumo dos resultados:
+
+*   **Alcance potencial somado:** 1.671 pessoas
+*   **Grupos com reação direta:** 3 de 4
+*   **Melhor retorno:** Grupo de vizinhança (Moradores do Contemporâneo Jardins) — gerou respostas e compartilhamento espontâneo para profissionais da saúde
+*   **Recepção discreta:** Grupos mais técnicos (dizAI! e Clube de Agências RD) apresentaram baixo engajamento e provável taxa de clique próxima de 1%
+
+Aprendizados das mensagens:
+
+1. **Tom e proximidade importam:** Linguagem pessoal e contexto comunitário elevaram a adesão (JAM+ e grupo de vizinhança).
+2. **Clareza do pedido:** Frisar duração curta (menos de 1 minuto) e impacto prático aumentou a disposição em participar.
+3. **Ajuste por público:** Mensagens muito técnicas reduziram conversão em grupos numerosos mas heterogêneos.
+
+Referência:
+
+*   [Desempenho das publicações em grupos — WhatsApp](./referencias/grupos-whatsapp.md)
+
+---
+
 ## Discussão e Oportunidades de Melhoria
 
 A combinação dos dados quantitativos e qualitativos oferece um mapa claro para futuras iterações do projeto. As principais oportunidades de melhoria são:
