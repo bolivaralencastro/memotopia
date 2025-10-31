@@ -9,7 +9,8 @@ if [ -z "$1" ]; then
   echo "
 Subcomandos disponíveis:"
   echo "  new <nome-do-texto> - Cria uma nova pasta de texto com a estrutura padrão."
-  echo "  push <mensagem>     - Adiciona, commita e envia alterações para o repositório remoto."
+  echo "  push <mensagem>     - Adiciona, commita e envia alterações para o repositório remoto.
+  update-nav          - Atualiza links de navegação em todos os textos (índice principal, conteúdo relacionado, links de retorno)."
   exit 1
 fi
 
