@@ -65,6 +65,7 @@ Profissional com **18 anos de experiência** em design gráfico, direção de ar
 - Concurso Imprima seu Estilo 3M.
 - Prêmio Funarte RespirArte – *Sobre Sutilezas* (Videodança).
 
+
 ## Conteúdo Relacionado
 
 <!-- RELATED_CONTENT_START -->
@@ -73,3 +74,4 @@ Profissional com **18 anos de experiência** em design gráfico, direção de ar
 ### Referências
 *   [Currículo detalhado de Bolívar Alencastro](./referencias/ref1.md)
 <!-- RELATED_CONTENT_END -->
+

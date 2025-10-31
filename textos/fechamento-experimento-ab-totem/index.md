@@ -61,6 +61,7 @@ O estudo se encerra com resultados sólidos, um caminho claro para futuras melho
 O experimento segue aberto para quem quiser conhecer e explorar:
 👉 https://bolivaralencastro.github.io/hemocentro-totem-ab-test/
 
+
 ## Conteúdo Relacionado
 
 <!-- RELATED_CONTENT_START -->
