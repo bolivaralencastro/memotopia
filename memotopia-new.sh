@@ -40,7 +40,7 @@ Autor: Exemplo
 Link: https://example.com
 Notas: referência inicial para $TITULO
 
-[Voltar ao Texto Principal](../../index.md)
+[Voltar ao Texto Principal](../index.md)
 EOT
 
 touch textos/$TITULO/assets/.gitkeep
