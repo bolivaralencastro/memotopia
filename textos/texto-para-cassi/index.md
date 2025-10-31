@@ -2,6 +2,9 @@
 # Texto para Cassi: Explorando a Modularidade
 ---
 
+[Voltar ao Índice da Memotopia](../../INDEX.md)
+
+
 Este é o texto principal para a Cassi, demonstrando como um componente de pensamento pode ser estruturado e interligado.
 
 ## Introdução
@@ -28,3 +31,4 @@ As fontes e inspirações para este texto podem ser encontradas nas [referência
 ## Conexões com Outros Textos
 
 Este texto se conecta com o [Exemplo de Texto](../exemplo/index.md) que aborda conceitos fundamentais.
+\n## Conteúdo Relacionado\n\n<!-- RELATED_CONTENT_START -->\n### Insights\n*   [Insight: A Arquitetura da Ideia](./insights/01-primeiro-insight.md)\n### Referências\n*   [Referência: O Poder da Modularidade](./referencias/ref1.md)\n<!-- RELATED_CONTENT_END -->\n

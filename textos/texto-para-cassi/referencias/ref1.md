@@ -10,3 +10,4 @@
 **Notas:** Este artigo explora como a aplicação de princípios modulares pode levar a sistemas mais robustos, escaláveis e fáceis de manter. É uma leitura essencial para entender a base teórica por trás da Memotopia.
 
 [Voltar ao Texto Principal](../../index.md)
+[Voltar ao Texto Principal](../index.md)
