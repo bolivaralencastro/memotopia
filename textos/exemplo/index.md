@@ -11,17 +11,6 @@ Ele vive como um componente com insights, referências e estilo próprios.
 Este é um texto de exemplo para validar a estrutura mínima.
 Ele vive como um componente com insights, referências e estilo próprios.
 
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
 
 ## Conteúdo Relacionado
 
@@ -31,8 +20,3 @@ Ele vive como um componente com insights, referências e estilo próprios.
 ### Referências
 *   [Referência simbólica](./referencias/ref1.md)
 <!-- RELATED_CONTENT_END -->
-
-
-
-
-

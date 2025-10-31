@@ -23,23 +23,9 @@ Aqui poderíamos desenvolver a ideia central deste texto. Imagine que estamos di
 
 ## Conteúdo Relacionado
 
-
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
 <!-- RELATED_CONTENT_START -->
 ### Insights
 *   [Insight: A Arquitetura da Ideia](./insights/01-primeiro-insight.md)
 ### Referências
 *   [Referência: O Poder da Modularidade](./referencias/ref1.md)
 <!-- RELATED_CONTENT_END -->
-
-
-
-
-

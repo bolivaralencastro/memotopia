@@ -49,7 +49,15 @@ generate_related_content_section() {
   local text_dir=$(dirname "$index_file")
   local related_content=""
 
-  related_content+="\n## Conteúdo Relacionado\n\n"
+  # Remove existing related content section to avoid duplication
+  if grep -q "## Conteúdo Relacionado" "$index_file"; then
+    sed -i '/## Conteúdo Relacionado/,/<!-- RELATED_CONTENT_END -->/d' "$index_file"
+  fi
+
+  # Remove trailing blank lines that may be left after sed deletion
+  sed -i -e :a -e '/^\n*$/{$d;N;};/\n$/ba' "$index_file"
+
+  related_content+="\n\n## Conteúdo Relacionado\n\n"
   related_content+="<!-- RELATED_CONTENT_START -->\n"
 
   # Insights
@@ -57,6 +65,7 @@ generate_related_content_section() {
     related_content+="### Insights\n"
     for insight_file in "${text_dir}/insights/"*.md; do
       local insight_name=$(basename "$insight_file" .md)
+      # Try to get title from header, fallback to filename
       local display_name=$(head -n 2 "$insight_file" | grep '^#' | sed 's/^# //g' | sed 's/.*/\u&/' || echo "$insight_name")
       related_content+="*   [${display_name}](./insights/${insight_name}.md)\n"
     done
@@ -67,28 +76,15 @@ generate_related_content_section() {
     related_content+="### Referências\n"
     for ref_file in "${text_dir}/referencias/"*.md; do
       local ref_name=$(basename "$ref_file" .md)
+      # Try to get title from header, fallback to filename
       local display_name=$(head -n 2 "$ref_file" | grep '^#' | sed 's/^# //g' | sed 's/.*/\u&/' || echo "$ref_name")
       related_content+="*   [${display_name}](./referencias/${ref_name}.md)\n"
     done
   fi
   related_content+="<!-- RELATED_CONTENT_END -->\n"
 
-  local temp_file=$(mktemp)
-  local current_content=$(cat "$index_file")
-
-  # Use awk for robust block replacement
-  awk -v related_content="$related_content" '\
-    /<!-- RELATED_CONTENT_START -->/{p=1; print related_content; next}\
-    /<!-- RELATED_CONTENT_END -->/{p=0; next}\
-    !p\
-  ' "$index_file" > "$temp_file"
-
-  # If markers were not found, append the section
-  if ! grep -q "<!-- RELATED_CONTENT_START -->" "$index_file"; then
-    echo -e "$related_content" >> "$temp_file"
-  fi
-
-  mv "$temp_file" "$index_file"
+  # Append the new related content section to the file
+  echo -e "$related_content" >> "$index_file"
 }
 
 # Função para adicionar link de retorno a arquivos menores

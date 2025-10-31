@@ -11,17 +11,6 @@ Explora desafios logísticos, políticas públicas e oportunidades de inovação
 Panorama narrativo sobre a rede de coleta e distribuição de sangue no país.
 Explora desafios logísticos, políticas públicas e oportunidades de inovação colaborativa.
 
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
-
-## Conteúdo Relacionado
-
 
 ## Conteúdo Relacionado
 
@@ -31,8 +20,3 @@ Explora desafios logísticos, políticas públicas e oportunidades de inovação
 ### Referências
 *   [Atlas da Doação de Sangue no Brasil](./referencias/atlas-sangue.md)
 <!-- RELATED_CONTENT_END -->
-
-
-
-
-
