@@ -12,22 +12,32 @@ add_link_to_main_index() {
 
   if ! grep -qF "$link" "$file"; then
     echo "Adicionando link para INDEX.md em $file"
-    # Read frontmatter
-    local frontmatter=""
-    local content_start_line=1
+    local frontmatter_block=""
+    local content_after_frontmatter=""
+    local has_frontmatter=false
+
+    # Check for frontmatter
     if head -n 1 "$file" | grep -q '^---$'; then
-      frontmatter=$(sed -n '/^---$/,/^---$/p' "$file")
-      content_start_line=$(grep -n '^---$' "$file" | tail -n 1 | cut -d: -f1)
-      content_start_line=$((content_start_line + 1))
+      has_frontmatter=true
+      # Extract frontmatter block
+      frontmatter_block=$(sed -n '/^---$/,/^---$/p' "$file")
+      # Extract content after frontmatter
+      local content_start_line=$(grep -n '^---$' "$file" | tail -n 1 | cut -d: -f1)
+      content_after_frontmatter=$(tail -n +"$((content_start_line + 1))" "$file")
+    else
+      # No frontmatter, entire file is content
+      content_after_frontmatter=$(cat "$file")
     fi
 
-    # Prepend link after frontmatter
+    # Construct new content
     {
-      echo "$frontmatter"
-      echo ""
+      if "$has_frontmatter"; then
+        echo "$frontmatter_block"
+        echo "" # Add a blank line after frontmatter
+      fi
       echo "$link"
-      echo ""
-      tail -n +"$content_start_line" "$file"
+      echo "" # Add a blank line after the link
+      echo "$content_after_frontmatter"
     } > "$temp_file"
     mv "$temp_file" "$file"
   fi
