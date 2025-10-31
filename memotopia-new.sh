@@ -22,14 +22,25 @@ metaforas: "jardim, oficina, mente viva"
 EOT
 
 cat > textos/$TITULO/insights/01-primeiro-insight.md <<EOT
+---
+# Insight Inicial
+---
+
 - Insight inicial: todo texto nasce como uma semente.
+
+[Voltar ao Texto Principal](../index.md)
 EOT
 
 cat > textos/$TITULO/referencias/ref1.md <<EOT
-# Referência simbólica
+---
+# Referência Simbólica
+---
+
 Autor: Exemplo
 Link: https://example.com
 Notas: referência inicial para $TITULO
+
+[Voltar ao Texto Principal](../../index.md)
 EOT
 
 touch textos/$TITULO/assets/.gitkeep
