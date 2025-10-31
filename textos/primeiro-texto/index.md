@@ -1,3 +1,4 @@
+---
 # Primeiro texto
 
 Texto inicial da Memotopia chamado **primeiro-texto**.
