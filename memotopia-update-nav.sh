@@ -95,7 +95,7 @@ add_return_link_to_sub_files() {
 shopt -s nullglob
 for text_dir in textos/*/ ; do
   echo "Processando diretório: $text_dir"
-  local index_md="${text_dir}index.md"
+  index_md="${text_dir}index.md"
 
   if [ -f "$index_md" ]; then
     add_link_to_main_index "$index_md"
