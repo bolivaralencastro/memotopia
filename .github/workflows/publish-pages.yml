@@ -29,17 +29,17 @@ jobs:
 
           # index.html sem acentos para evitar qualquer parsing bobo
           cat > public/index.html <<'HTML'
-<!doctype html>
-<html lang="pt-br">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Memotopia</title>
-<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 800px; margin: 40px auto; line-height:1.6;">
-  <h1>Memotopia</h1>
-  <p>Ecossistema modular de escrita e pensamento.</p>
-  <h2>Textos</h2>
-  <ul>
-HTML
+          <!doctype html>
+          <html lang="pt-br">
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>Memotopia</title>
+          <body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 800px; margin: 40px auto; line-height:1.6;">
+            <h1>Memotopia</h1>
+            <p>Ecossistema modular de escrita e pensamento.</p>
+            <h2>Textos</h2>
+            <ul>
+          HTML
 
           # Lista de textos com link para o repo
           if [ -d textos ]; then
@@ -52,13 +52,13 @@ HTML
           fi
 
           cat >> public/index.html <<'HTML'
-  </ul>
-  <hr>
-  <p>Gerado em <span id="stamp"></span> (UTC)</p>
-  <script>document.getElementById('stamp').textContent = new Date().toISOString().slice(0,16).replace('T',' ')</script>
-</body>
-</html>
-HTML
+            </ul>
+            <hr>
+            <p>Gerado em <span id="stamp"></span> (UTC)</p>
+            <script>document.getElementById('stamp').textContent = new Date().toISOString().slice(0,16).replace('T',' ')</script>
+          </body>
+          </html>
+          HTML
 
           # (Opcional) expor os .md para download/visualizacao bruta
           if [ -d textos ]; then
