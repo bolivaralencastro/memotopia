@@ -73,5 +73,6 @@ O experimento segue aberto para quem quiser conhecer e explorar:
 ### Insights
 *   [01-dados-experimento](./insights/01-dados-experimento.md)
 *   [Análise de Dados do Clarity](./insights/02-dados-clarity.md)
+*   [Análise Cruzada de Dados: Experimento A/B e Comportamento do Usuário](./insights/03-analise-cruzada-de-dados.md)
 <!-- RELATED_CONTENT_END -->
 
