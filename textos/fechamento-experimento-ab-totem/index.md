@@ -73,3 +73,4 @@ O experimento segue aberto para quem quiser conhecer e explorar:
 ### Insights
 *   [01-dados-experimento](./insights/01-dados-experimento.md)
 <!-- RELATED_CONTENT_END -->
+

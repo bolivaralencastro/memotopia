@@ -20,3 +20,4 @@ Explora desafios logísticos, políticas públicas e oportunidades de inovação
 ### Referências
 *   [Atlas da Doação de Sangue no Brasil](./referencias/atlas-sangue.md)
 <!-- RELATED_CONTENT_END -->
+

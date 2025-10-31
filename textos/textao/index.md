@@ -20,3 +20,4 @@ Aqui você pode começar a escrever a ideia central, narrativa ou reflexão.
 ### Referências
 *   [Referência Simbólica](./referencias/ref1.md)
 <!-- RELATED_CONTENT_END -->
+

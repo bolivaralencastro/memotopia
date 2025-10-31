@@ -20,3 +20,4 @@ Ele vive como um componente com insights, referências e estilo próprios.
 ### Referências
 *   [Referência simbólica](./referencias/ref1.md)
 <!-- RELATED_CONTENT_END -->
+

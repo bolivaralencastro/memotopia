@@ -29,3 +29,4 @@ Aqui poderíamos desenvolver a ideia central deste texto. Imagine que estamos di
 ### Referências
 *   [Referência: O Poder da Modularidade](./referencias/ref1.md)
 <!-- RELATED_CONTENT_END -->
+
