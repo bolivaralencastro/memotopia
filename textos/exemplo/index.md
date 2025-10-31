@@ -1,3 +1,4 @@
+---
 # Exemplo de texto (Memotopia)
 
 Este é um texto de exemplo para validar a estrutura mínima.
