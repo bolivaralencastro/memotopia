@@ -8,6 +8,7 @@ fi
 mkdir -p textos/$TITULO/{insights,referencias,assets}
 
 cat > textos/$TITULO/index.md <<EOT
+---
 # $(echo $TITULO | sed 's/-/ /g' | sed 's/.*/\u&/')
 
 Texto inicial da Memotopia chamado **$TITULO**.
