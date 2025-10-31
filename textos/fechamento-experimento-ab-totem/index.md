@@ -17,6 +17,17 @@ O experimento foi desenvolvido com Angular + TypeScript e estilizado com Tailwin
 
 O projeto foi hospedado no GitHub Pages e otimizado cuidadosamente, alcançando a pontuação máxima (100/100) em desempenho, acessibilidade, práticas recomendadas e SEO no PageSpeed Insights, tanto em desktop quanto em mobile.
 
+### Fluxo da Jornada do Usuário
+
+A jornada foi estruturada para garantir a neutralidade dos resultados e a consistência da coleta de dados:
+
+- **Sorteio e Início:** A tela inicial convidava o participante a melhorar o totem, reforçava a política de privacidade (nenhuma informação pessoal coletada) e, ao clicar em "Começar Teste", sorteava automaticamente a ordem de exibição das interfaces (A→B ou B→A).
+- **Execução dos Testes:** O sistema capturava tempo gasto e quantidade de erros (toques de correção/backspace) em cada interface, registrando qual versão foi concluída.
+- **Coleta de Feedback:** Após cada cenário, o participante avaliava a interface com uma nota de 1 a 5 e um comentário opcional, garantindo uniformidade na coleta de dados subjetivos.
+- **Encerramento e Engajamento:** A tela final agradecia a participação, exibia métricas comparativas dos tempos de conclusão e apresentava um *call to action* convidando a abrir um painel com hemocentros próximos — cliques registrados como evento de engajamento pós-teste.
+
+A arquitetura utilizava uma **Máquina de Estados Reativa** (via *signals* e *computed properties*) para controlar automaticamente a transição entre estados (Welcome, Teste, Feedback, Finished), registrando métricas antes de avançar para a próxima etapa.
+
 ---
 
 ## Análise Quantitativa dos Resultados
@@ -37,7 +48,7 @@ A análise por dispositivo, combinando dados do experimento e do Clarity, mostra
 A análise dos feedbacks e do comportamento dos usuários com o Clarity revelou pontos importantes:
 
 *   **Familiaridade e Intuitividade:** A maioria dos usuários considerou a nova interface mais "familiar" e "intuitiva", o que justifica a redução no tempo de digitação.
-*   **Uso Mobile:** Quase metade dos acessos (47,8%) foram feitos em dispositivos móveis, um dado que reforça a importância de uma experiência mobile bem resolvida.
+*   **Perfil de Acesso:** Quase metade dos acessos (47,8%) vieram de dispositivos móveis durante a fase de coleta de dados. O experimento inicialmente bloqueava acesso mobile, mas a trava foi removida ao observar o volume de tráfego — uma decisão metodológica que trouxe insights valiosos sobre o comportamento das interfaces em diferentes contextos (ver [Iteração no Acesso Mobile](./insights/05-iteracao-acesso-mobile.md)).
 *   **Pontos de Fricção:** O Clarity revelou que 11% dos cliques foram "inativos", ocorrendo quando o usuário tentava clicar em botões desabilitados. Além disso, foram registrados 7 erros de JavaScript, indicando pontos de melhoria na estabilidade da aplicação.
 
 ---
@@ -58,7 +69,7 @@ Ecos relevantes:
 
 Aprendizados da divulgação (Publicações 2 e 3):
 
-1. **Aderência e canal:** Mesmo com boa recepção orgânica, a participação ficou abaixo do esperado. Abrir o acesso mobile foi necessário, mas insuficiente sem reforço de mensagem e contexto.
+1. **Aderência e canal:** Mesmo com boa recepção orgânica, a participação ficou abaixo do esperado. Inicialmente, o experimento havia sido configurado com uma trava que bloqueava acesso via mobile, já que o foco era simular o uso real em totens físicos. Observando que parte significativa do tráfego vinha de dispositivos móveis, a trava foi removida — uma decisão que trouxe insights valiosos sobre o comportamento da nova interface em diferentes contextos de uso. Essa abertura ajudou a ampliar a base de participantes, embora o reforço de mensagem e contexto ainda fosse necessário.
 2. **Momento do feedback:** Mover a avaliação para logo após cada interface aumentou taxa e qualidade das respostas.
 3. **CTA de doação:** Reposicionar e reescrever o convite ajudou a investigar se a baixa taxa de cliques era comunicação, contexto ou motivação.
 
@@ -99,13 +110,31 @@ Referência:
 
 ---
 
-## Discussão e Oportunidades de Melhoria
+## Discussão e Reflexões sobre o Projeto
 
-A combinação dos dados quantitativos e qualitativos oferece um mapa claro para futuras iterações do projeto. As principais oportunidades de melhoria são:
+Este experimento revelou aprendizados que transcendem os resultados numéricos e oferecem insights valiosos para projetos futuros de design de interfaces:
 
-1.  **Adaptar o fluxo para Mobile:** Criar uma experiência guiada para usuários de celular, que representam uma parcela significativa do tráfego.
-2.  **Reduzir Cliques Inativos:** Implementar feedback visual imediato, como contadores de dígitos, para informar ao usuário por que um botão está desabilitado.
-3.  **Investigar Erros de JavaScript:** Corrigir os erros de "cannot read properties of null (reading 'usestate')" para melhorar a estabilidade e a performance da aplicação.
+### Sobre a Metodologia
+
+O uso de uma Máquina de Estados Reativa garantiu a neutralidade do teste, já que a ordem de exibição das interfaces (A→B ou B→A) foi aleatória para cada participante. Isso eliminou vieses decorrentes da ordem de apresentação e permitiu que as métricas coletadas refletissem verdadeiramente a diferença entre os designs, não fatores externos. A instrumentação analítica via Clarity complementou os dados objetivos, revelando comportamentos sutis como cliques inativos (11% do total), que indicavam confusão sobre botões desabilitados.
+
+### Sobre a Divulgação e Engajamento
+
+Embora o experimento tenha sido projetado para simular o uso real em um totem físico (em ambientes desktop), quase metade dos acessos (47,8%) vieram de dispositivos móveis durante a fase de coleta de dados. 
+
+Inicialmente, o experimento possuía uma trava bloqueando acesso mobile para manter a fidelidade ao contexto de uso real. Observando o volume de tráfego mobile, a decisão foi **remover a trava e abrir o acesso** — uma mudança metodológica que trouxe hipóteses interessantes: esperava-se que ambos os layouts teriam tempos menores em mobile (devido ao uso de duas mãos), mas que a nova interface manteria vantagem. Os resultados confirmaram: a nova interface ganhou em ambos os contextos, com vantagem **maior** em mobile (95,88%) do que em desktop (93,75%).
+
+Esse dado revelou a importância de considerar o contexto de divulgação ao desenhar estudos públicos: mesmo quando o foco é um dispositivo específico, é necessário criar uma experiência que funcione em múltiplos cenários de acesso. A abordagem iterativa também demonstrou valor — ajustar metodologia com base em dados observados trouxe insights que não estariam disponíveis no desenho inicial.
+
+A divulgação no LinkedIn e WhatsApp trouxe validação social importante — ambas a Fundação Pró-Sangue e a WTotem manifestaram interesse — mas também ensinou sobre os limites de canais orgânicos: das 2.362 impressões no LinkedIn, apenas 19 acessos efetivos foram registrados, e das mensagens enviadas para grupos de WhatsApp, a taxa de conversão variou significativamente conforme o tom e a proximidade da audiência com o tema.
+
+### Sobre a Tomada de Decisão Orientada por Dados
+
+Os resultados quantitativos (redução de 93% a 95% no tempo de digitação) foram validados pelos feedbacks qualitativos (maior percepção de familiaridade e intuitividade), demonstrando que uma pequena mudança de design pode gerar impacto mensurável. Para um hemocentro, onde cada segundo economizado na etapa de cadastro se multiplica pelo número de doadores diários, a escolha da interface mais eficiente tem impacto operacional real.
+
+### Limitações e Próximos Passos
+
+Embora o estudo tenha alcançado seus objetivos, algumas limitações ficaram claras: 7 erros de JavaScript foram registrados durante as sessões, indicando necessidade de melhorias na robustez da aplicação. Além disso, o sucesso em atrair stakeholders relevantes (Fundação Pró-Sangue, WTotem) sugere que o próximo passo natural seria validar a implementação da nova interface em um ambiente de produção real, observando comportamento e métricas de uso efetivo em totens físicos.
 
 ---
 
@@ -127,5 +156,7 @@ O experimento segue aberto para quem quiser conhecer e explorar:
 *   [Análise de Dados do Clarity](./insights/02-dados-clarity.md)
 *   [Análise Cruzada de Dados: Experimento A/B e Comportamento do Usuário](./insights/03-analise-cruzada-de-dados.md)
 *   [Como aproveitar os dados do Clarity](./insights/04-oportunidades-de-melhoria-com-clarity.md)
+*   [Iteração no Acesso Mobile: Hipótese e Resultados](./insights/05-iteracao-acesso-mobile.md)
+*   [Análise Temporal: Sessões Diárias e Impacto das Campanhas](./insights/06-analise-temporal-campanhas.md)
 <!-- RELATED_CONTENT_END -->
 
