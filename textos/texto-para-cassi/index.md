@@ -31,3 +31,13 @@ As fontes e inspirações para este texto podem ser encontradas nas [referência
 ## Conexões com Outros Textos
 
 Este texto se conecta com o [Exemplo de Texto](../exemplo/index.md) que aborda conceitos fundamentais.
+
+## Conteúdo Relacionado
+
+<!-- RELATED_CONTENT_START -->
+### Insights
+*   [Insight: A Arquitetura da Ideia](./insights/01-primeiro-insight.md)
+### Referências
+*   [Referência: O Poder da Modularidade](./referencias/ref1.md)
+<!-- RELATED_CONTENT_END -->
+
