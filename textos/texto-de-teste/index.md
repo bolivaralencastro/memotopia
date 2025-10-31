@@ -1,3 +1,4 @@
+---
 # Texto de teste
 
 Texto inicial da Memotopia chamado **texto-de-teste**.
