@@ -20,20 +20,6 @@ Aqui poderíamos desenvolver a ideia central deste texto. Imagine que estamos di
 *   Benefícios da abordagem modular
 *   Exemplos práticos
 
-## Insights Relevantes
-
-Para aprofundar, confira alguns [insights sobre este texto](./insights/01-primeiro-insight.md).
-
-## Referências Utilizadas
-
-As fontes e inspirações para este texto podem ser encontradas nas [referências aqui](./referencias/ref1.md).
-
-## Conexões com Outros Textos
-
-Este texto se conecta com o [Exemplo de Texto](../exemplo/index.md) que aborda conceitos fundamentais.
-
-## Conteúdo Relacionado
-
 <!-- RELATED_CONTENT_START -->
 ### Insights
 *   [Insight: A Arquitetura da Ideia](./insights/01-primeiro-insight.md)
