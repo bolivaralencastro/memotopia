@@ -76,14 +76,18 @@ generate_related_content_section() {
   local temp_file=$(mktemp)
   local current_content=$(cat "$index_file")
 
-  if [[ "$current_content" =~ "<!-- RELATED_CONTENT_START -->" && "$current_content" =~ "<!-- RELATED_CONTENT_END -->" ]]; then
-    # Replace existing section
-    echo "$current_content" | sed "/<!-- RELATED_CONTENT_START -->/,/<!-- RELATED_CONTENT_END -->/c\$related_content" > "$temp_file"
-  else
-    # Append new section
-    echo "$current_content" >> "$temp_file"
-    echo "$related_content" >> "$temp_file"
+  # Use awk for robust block replacement
+  awk -v related_content="$related_content" '\
+    /<!-- RELATED_CONTENT_START -->/{p=1; print related_content; next}\
+    /<!-- RELATED_CONTENT_END -->/{p=0; next}\
+    !p\
+  ' "$index_file" > "$temp_file"
+
+  # If markers were not found, append the section
+  if ! grep -q "<!-- RELATED_CONTENT_START -->" "$index_file"; then
+    echo -e "$related_content" >> "$temp_file"
   fi
+
   mv "$temp_file" "$index_file"
 }
 
