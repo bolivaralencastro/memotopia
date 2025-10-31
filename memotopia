@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Diretório onde os subcomandos estão localizados
+SUBCOMMAND_DIR="$(dirname "$0")"
+
+# Verifica se um subcomando foi fornecido
+if [ -z "$1" ]; then
+  echo "Uso: memotopia <subcomando> [argumentos]"
+  echo "
+Subcomandos disponíveis:"
+  echo "  new <nome-do-texto> - Cria uma nova pasta de texto com a estrutura padrão."
+  echo "  push <mensagem>     - Adiciona, commita e envia alterações para o repositório remoto."
+  exit 1
+fi
+
+SUBCOMMAND="$1"
+shift # Remove o subcomando da lista de argumentos
+
+# Constrói o caminho para o script do subcomando
+SUBCOMMAND_SCRIPT="${SUBCOMMAND_DIR}/memotopia-${SUBCOMMAND}.sh"
+
+# Verifica se o script do subcomando existe e é executável
+if [ -f "$SUBCOMMAND_SCRIPT" ] && [ -x "$SUBCOMMAND_SCRIPT" ]; then
+  # Executa o script do subcomando com os argumentos restantes
+  exec "$SUBCOMMAND_SCRIPT" "$@"
+else
+  echo "❌ Subcomando inválido: $SUBCOMMAND"
+  echo "Use 'memotopia' para ver a lista de subcomandos disponíveis."
+  exit 1
+fi
