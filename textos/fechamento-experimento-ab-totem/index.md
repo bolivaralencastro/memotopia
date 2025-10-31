@@ -74,9 +74,13 @@ O experimento segue aberto para quem quiser conhecer e explorar:
 
 ## Conteúdo Relacionado
 
+
+## Conteúdo Relacionado
+
 <!-- RELATED_CONTENT_START -->
 ### Insights
 *   [01-dados-experimento](./insights/01-dados-experimento.md)
 <!-- RELATED_CONTENT_END -->
+
 
 
