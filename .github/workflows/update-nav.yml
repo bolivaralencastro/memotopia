@@ -16,7 +16,7 @@ jobs:
 
       - name: Run memotopia update-nav
         run: |
-          /workspaces/memotopia/memotopia update-nav
+          ./memotopia update-nav
 
       - name: Commit and push changes
         run: |
