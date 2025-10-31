@@ -14,6 +14,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Debug - List root directory
+        run: ls -l
+
+      - name: Debug - Print current working directory
+        run: pwd
+
+      - name: Debug - Check memotopia script permissions
+        run: ls -l memotopia
+
       - name: Run memotopia update-nav
         run: |
           ./memotopia update-nav
