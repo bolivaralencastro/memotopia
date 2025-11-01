@@ -1,0 +1,27 @@
+{
+  "name": "Afya",
+  "ref": "afya-product-designer-senior",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da Afya! Transformo saúde e educação com design.",
+    "subhead": "Com Product Design, pesquisa e Figma, crio experiências digitais inclusivas para educação médica.",
+    "cta_label": "Contato"
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Product Designer Sênior na Afya."
+
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "afya",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-afya-2025",
+    "utm_term": "Product-Designer-Senior",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4317615133",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

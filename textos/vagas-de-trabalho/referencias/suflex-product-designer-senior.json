@@ -1,0 +1,27 @@
+{
+  "name": "Suflex",
+  "ref": "suflex-product-designer-senior",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da Suflex! Simplifico processos e transformo jornadas de clientes.",
+    "subhead": "Com Product Design, Design Systems e Figma, lidero o design de ponta a ponta, criando interfaces de alta fidelidade.",
+    "cta_label": "Contato",
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Product Designer Sênior na Suflex."
+
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "suflex",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-suflex-2025",
+    "utm_term": "Product-Designer-Senior",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "https://www.linkedin.com/jobs/search/?alertAction=viewjobs&currentJobId=4332988862&origin=JOBS_HOME_JOB_ALERTS&savedSearchId=4528389449",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

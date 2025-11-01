@@ -1,0 +1,26 @@
+{
+  "name": "Dexco",
+  "ref": "dexco-analista-product-designer-ux-pleno",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da Dexco! Crio soluções de design para um Melhor Viver.",
+    "subhead": "Com Figma, pesquisa e experiência em eCommerce, crio protótipos de alta fidelidade para jornadas digitais no varejo.",
+    "cta_label": "Contato",
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Analista Product Designer UX Pleno na Dexco."
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "dexco",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-dexco-2025",
+    "utm_term": "Analista-Product-Designer-UX-Pleno",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4318768481&start=24",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

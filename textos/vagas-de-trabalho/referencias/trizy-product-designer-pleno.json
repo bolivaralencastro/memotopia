@@ -1,0 +1,27 @@
+{
+  "name": "Trizy by nstech",
+  "ref": "trizy-product-designer-pleno",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da Trizy! Simplifico a vida dos caminhoneiros com design.",
+    "subhead": "Com Product Design, Figma e pesquisa, crio interfaces visuais de alta qualidade e garanto a consistência da experiência.",
+    "cta_label": "Contato"
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Product Designer Pleno na Trizy by nstech."
+
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "trizy-by-nstech",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-trizy-2025",
+    "utm_term": "Product-Designer-Pleno",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

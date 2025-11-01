@@ -1,0 +1,26 @@
+{
+  "name": "Certisign",
+  "ref": "certisign-ux-designer-pleno",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, Certisign! Aprimoro experiências em ID digital.",
+    "subhead": "Com UX/UI, prototipagem e pesquisa, crio soluções eficazes para identidades digitais confiáveis.",
+    "cta_label": "Contato",
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de UX Designer Pleno na Certisign."
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "certisign",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-certisign-2025",
+    "utm_term": "UX-Designer-Pleno",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4311961172",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

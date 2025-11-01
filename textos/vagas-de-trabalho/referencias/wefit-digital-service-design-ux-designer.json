@@ -1,0 +1,27 @@
+{
+  "name": "WeFit - Digital Service Design",
+  "ref": "wefit-ux-designer",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da WeFit! Transformo estratégias em experiências digitais.",
+    "subhead": "Com UX/UI Design, Figma e prototipação, aplico raciocínio lógico e conduzo pesquisas para interfaces de alta fidelidade.",
+    "cta_label": "Contato",
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Designer de Experiência do Usuário na WeFit - Digital Service Design."
+
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "wefit-digital-service-design",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-wefit-2025",
+    "utm_term": "Designer-de-Experiencia-do-Usuario",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Reclame AQUI",
+  "ref": "reclameaqui-product-designer-pleno",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da Reclame AQUI! Garanto interações intuitivas e eficazes.",
+    "subhead": "Com pesquisa, UX/UI Design e prototipação, crio interfaces eficazes e conduzo testes de usabilidade.",
+    "cta_label": "Contato",
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Product Designer Pleno na Reclame AQUI."
+
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "reclameaqui",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-reclameaqui-2025",
+    "utm_term": "Product-Designer-Pleno",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Stone",
+  "ref": "stone-especialista-product-designer-i",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da Stone! Transformo a indústria de pagamentos com design.",
+    "subhead": "Com Product Design (web e mobile), Figma e Design Systems, crio experiências digitais excepcionais, baseadas em pesquisa e testes de usabilidade.",
+    "cta_label": "Contato"
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de ESPECIALISTA PRODUCT DESIGNER I na Stone."
+
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "stone",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-stone-2025",
+    "utm_term": "ESPECIALISTA-PRODUCT-DESIGNER-I",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4316704533&start=24",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

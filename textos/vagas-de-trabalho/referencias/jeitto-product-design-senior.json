@@ -1,0 +1,26 @@
+{
+  "name": "Jeitto",
+  "ref": "jeitto-product-design-senior",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da Jeitto! Transformo acesso financeiro com design inovador.",
+    "subhead": "Com Product Design, pesquisa e Figma, lidero soluções de crédito rápido e descomplicado.",
+    "cta_label": "Contato",
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Product Design Senior na Jeitto."
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "jeitto",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-jeitto-2025",
+    "utm_term": "Product-Design-Senior",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4291325522",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}

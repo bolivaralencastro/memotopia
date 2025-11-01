@@ -1,0 +1,27 @@
+{
+  "name": "MJV Technology & Innovation",
+  "ref": "mjv-product-designer",
+  "type": "Inscrição em vaga",
+  "platform": "Linkedin Jobs",
+  "copies": {
+    "description": "Instruções para personalizar os textos do seu portfólio com base nas informações da vaga.",
+    "h1": "Product Designer | UX/UI Specialist",
+    "text_blue": "Olá, time da MJV! Impulsiono negócios com design mobile e IA.",
+    "subhead": "Com Product Design mobile-first, IA e Figma, crio interfaces intuitivas e inteligentes, garantindo acessibilidade.",
+    "cta_label": "Contato"
+    "prefilled_message": "Olá, Bolívar! Vi seu portfólio e gostaria de conversar mais sobre sua experiência para a vaga de Product Designer na MJV Technology & Innovation."
+
+  },
+  "utms": {
+    "description": "Instruções para configurar o rastreamento de cada candidatura no Analytics.",
+    "utm_source": "mjv-technology-innovation",
+    "utm_medium": "vaga",
+    "utm_campaign": "aplicacao-vaga-mjv-2025",
+    "utm_term": "Product-Designer",
+    "utm_content": "aplicacao-via-linkedin"
+  },
+  "source_url": "",
+  "portfolio_url": "",
+  "cta_label": "",
+  "prefilled_message": ""
+}
