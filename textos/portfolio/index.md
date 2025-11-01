@@ -9,7 +9,7 @@
 
 - **Localização:** São Paulo / Florianópolis
 - **Contato:** [bolivar@alencastro.com.br](mailto:bolivar@alencastro.com.br) · +55 48 98413-8601
-- **Links:** [LinkedIn](https://www.linkedin.com/in/bolivaralencastro) · [Portfólio](https://www.bolivaralencastro.com.br)
+- **Links:** [LinkedIn](https://www.linkedin.com/in/bolivaralencastro) · [Portfólio](https://www.bolivaralencastro.com.br) · [Portfólio (vaga Afya)](https://www.bolivaralencastro.com.br/?ref=product-designer-senior&utm_source=linkedin_jobs&utm_medium=vaga&utm_campaign=afya&utm_term=out&utm_content=2025)
 
 Atuação ponta a ponta (discovery → delivery) com foco em:
 
